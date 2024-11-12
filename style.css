@@ -1,0 +1,142 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  background-color: #001f3f; /* Navy blue background */
+  color: #ffffff;
+  padding: 20px;
+}
+
+.todo-app {
+  background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent navy blue */
+  width: 100%;
+  max-width: 400px;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+header h1 {
+  font-size: 2em;
+  color: #ffffff;
+}
+
+header .quote {
+  font-size: 1em;
+  color: #cccccc;
+  font-style: italic;
+  margin-bottom: 15px;
+}
+
+.date-time {
+  font-size: 0.9em;
+  color: #aaaaaa;
+  margin-bottom: 15px;
+}
+
+header input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1em;
+  background-color: #ffffff;
+  color: #333;
+}
+
+header button {
+  width: 100%;
+  padding: 10px;
+  background-color: #ff6b6b;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+header button:hover {
+  background-color: #ff3b3b;
+}
+
+.counter {
+  margin-top: 15px;
+  font-size: 1.2em;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+ul {
+  list-style-type: none;
+  margin-top: 20px;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  margin: 10px 0;
+  background-color: rgba(255, 255, 255, 0.2); /* Light overlay */
+  border-radius: 8px;
+  font-size: 1em;
+  color: #ffffff;
+}
+
+li.completed {
+  text-decoration: line-through;
+  color: #cccccc;
+}
+
+li .delete-btn {
+  margin-left: auto;
+  background-color: #ff6b6b;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+li .delete-btn:hover {
+  background-color: #ff3b3b;
+}
+
+li input[type="checkbox"] {
+  margin-right: 10px;
+  transform: scale(1.2);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .todo-app {
+      padding: 15px;
+  }
+  
+  header h1 {
+      font-size: 1.5em;
+  }
+
+  header input, header button {
+      font-size: 0.9em;
+  }
+
+  .counter {
+      font-size: 1em;
+  }
+}
